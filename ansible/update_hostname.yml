@@ -1,0 +1,14 @@
+---
+- name: Update remote hostname
+  hosts: remote
+  become: yes
+  tasks:
+    - name: Set hostname to roksolana-protsiv-lab2
+      lineinfile:
+        path: /etc/hostname
+        regexp: '^.*$'
+        line: 'roksolana-protsiv-lab2'
+      notify: Restart hostname
+  handlers:
+    - name: Restart hostname
+      ansible.builtin.shell: hostnamectl set-hostname roksolana-protsiv-lab2

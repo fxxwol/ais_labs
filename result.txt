@@ -1,0 +1,13 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAY [Update remote hostname] **************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [100.26.48.220]
+
+TASK [Set hostname to roksolana-protsiv-lab2] **********************************
+ok: [100.26.48.220] => {"backup": "", "changed": false, "msg": ""}
+
+PLAY RECAP *********************************************************************
+100.26.48.220              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
