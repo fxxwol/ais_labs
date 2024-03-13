@@ -1,0 +1,12 @@
+---
+- name: Install package using appropriate package manager
+  package:
+    name: "{{ package_to_install }}"
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Install package using yum package manager
+  package:
+    name: "{{ package_to_install }}"
+    state: present
+  when: ansible_os_family == 'RedHat'

@@ -1,0 +1,9 @@
+---
+- name: Playbook to install packages
+  hosts: aws_vms
+  become: yes
+  vars:
+    package_to_install: "htop"
+
+  roles:
+    - package_install
